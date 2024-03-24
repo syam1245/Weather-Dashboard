@@ -1,0 +1,98 @@
+/* Base styles */
+.weather-widget {
+    font-family: 'Roboto', sans-serif; /* Set a base font-family for consistency */
+  }
+  
+  /* Title styles */
+  .title {
+    font-size: 24px; /* Rounded up for consistency */
+    font-weight: bold; /* Use keyword for readability */
+  }
+  
+  /* Daily item styles */
+  .daily-item {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Moved up for DRY principle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    height: 40px;
+    margin: 5px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px; /* Increased for better readability */
+    padding: 5px 20px;
+  }
+  
+  /* Icon styles */
+  .icon-small {
+    width: 40px;
+    transition: transform 0.3s; /* Moved up for DRY principle */
+  }
+  
+  /* Day styles within daily item */
+  .daily-item .day {
+    color: #5404b5;
+    flex: 1;
+    font-weight: bold; /* Use keyword for readability */
+    margin-left: 15px;
+  }
+  
+  /* Description styles */
+  .description {
+    color: rgb(248, 240, 240);
+    flex: 1;
+    margin-right: 50px;
+    text-align: right;
+  
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  
+  /* Min-max styles */
+  .min-max {
+    color: #EC6C5B;
+  }
+  
+  /* Daily details grid styles */
+  .daily-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Simplified for readability */
+    gap: 0 15px; /* Combined row-gap and column-gap for brevity */
+    padding: 5px 15px;
+  }
+  
+  /* Daily details grid item styles */
+  .daily-details-grid-item {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    justify-content: space-evenly;
+  
+    label:first-child {
+      color: #0baee0;
+    }
+  
+    label:last-child {
+      color: #a60c0c;
+    }
+  }
+  
+  /* Accordion button styles */
+  .accordion-button {
+    transition: background-color 0.3s, border-radius 0.3s;
+  
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  
+    &:not(.collapsed) {
+      background: linear-gradient(to right, #8e9eab, #eef2f3);
+      border-radius: 15px 15px 0 0;
+  
+      .icon-small {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
